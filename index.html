@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Giancarlos Reyes — Software Engineer portfolio showcasing projects, experience, and contact information." />
+  <title>Giancarlos Reyes — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23000'/><text x='50' y='58' font-size='56' text-anchor='middle' fill='%23fff' font-family='Arial, Helvetica, sans-serif'>GR</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#top" class="logo" aria-label="Go to top">GR</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M21.64 13a9 9 0 1 1-10.63-10.6 1 1 0 0 1 1.11.27 1 1 0 0 1 .22 1.07 7 7 0 0 0 8.93 8.93 1 1 0 0 1 1.34 1.33A9 9 0 0 1 21.64 13z"></path>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Giancarlos Reyes</h1>
+        <p class="subtitle">Software Engineer • Notre Dame ’27 • Full‑stack & cloud</p>
+        <p class="summary">
+          I build reliable, user‑centric software — from AWS‑powered data services to clean, accessible web apps.
+          Recently: automated SEC 10‑K/10‑Q retrieval on AWS (Lambda, S3, EventBridge) and built
+          real‑estate listing parsers with OCR to speed underwriting.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:youremail@example.com">Email me</a>
+          <a class="btn" href="assets/resume.pdf" download>Download résumé</a>
+          <a class="btn ghost" rel="noopener" target="_blank" href="https://github.com/your-github">GitHub</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="blob"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <p>
+        I'm a Computer Science student at the University of Notre Dame with a minor in Real Estate.
+        I enjoy building systems that combine clean engineering with measurable business impact.
+        My toolkit spans Python, C, and JavaScript/TypeScript — plus AWS for serverless automation.
+      </p>
+      <ul class="quickfacts">
+        <li><strong>Location:</strong> Washington, DC area • open to relocation</li>
+        <li><strong>Interests:</strong> backend APIs, data engineering, automation, and UX polish</li>
+        <li><strong>Currently:</strong> refining a filings parser to map fiscal periods → reports precisely</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <div class="grid skills-grid">
+        <article class="card"><h3>Languages</h3><p>Python, C, JavaScript/TypeScript, SQL, HTML, CSS</p></article>
+        <article class="card"><h3>Frameworks</h3><p>Node.js, React, Express</p></article>
+        <article class="card"><h3>Cloud & Data</h3><p>AWS (Lambda, S3, EventBridge), REST APIs, JSON, CSV, OCR (Tesseract)</p></article>
+        <article class="card"><h3>Tools</h3><p>Git/GitHub, Docker, VS Code, Linux, Pandas</p></article>
+        <article class="card"><h3>Coursework</h3><p>Data Structures, Discrete Math, Computing Systems, Algorithms</p></article>
+        <article class="card"><h3>Soft skills</h3><p>Client communication, cross‑functional collaboration, documentation</p></article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <div class="filters" role="tablist" aria-label="Project filters">
+          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-filter="backend" role="tab">Backend</button>
+          <button class="chip" data-filter="web" role="tab">Web</button>
+          <button class="chip" data-filter="data" role="tab">Data</button>
+        </div>
+      </div>
+      <div class="grid project-grid">
+        <article class="project card" data-tags="backend,data">
+          <div class="project-body">
+            <h3>SEC EDGAR Filing Q/K Retrieval (AWS)</h3>
+            <p>
+              Serverless pipeline that fetches 10‑K/10‑Q filings by ticker and year, maps to fiscal periods,
+              and feeds an LLM for finance Q&A. Built with AWS Lambda, S3, and EventBridge.
+            </p>
+            <ul class="tags"><li>AWS</li><li>Python</li><li>Lambda</li><li>LLM</li></ul>
+          </div>
+          <div class="project-actions">
+            <a class="btn small" href="#" aria-disabled="true">Live (private)</a>
+            <a class="btn small ghost" href="https://github.com/your-github/sec-edgar-pipeline" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="project card" data-tags="data,backend,web">
+          <div class="project-body">
+            <h3>CREXI/LoopNet OCR → CSV Automation</h3>
+            <p>
+              Ingests broker screenshots, extracts hotel metrics (keys, price, $/key, broker), and exports a polished CSV for underwriting.
+              Uses OCR post‑processing and schema validation.
+            </p>
+            <ul class="tags"><li>OCR</li><li>Python</li><li>Pandas</li></ul>
+          </div>
+          <div class="project-actions">
+            <a class="btn small ghost" href="https://github.com/your-github/crexi-automation" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="project card" data-tags="web">
+          <div class="project-body">
+            <h3>Auto Shop Website</h3>
+            <p>
+              Responsive marketing site with online booking link and testimonials.
+              Delivered SEO basics and faster load via image optimization.
+            </p>
+            <ul class="tags"><li>React</li><li>Node</li><li>CSS</li></ul>
+          </div>
+          <div class="project-actions">
+            <a class="btn small" href="#" aria-disabled="true">Live</a>
+            <a class="btn small ghost" href="https://github.com/your-github/auto-shop-site" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="project card" data-tags="web,backend">
+          <div class="project-body">
+            <h3>This Portfolio</h3>
+            <p>
+              Accessible, responsive, no‑framework portfolio with dark mode, scroll‑reveal,
+              and semantic HTML. Deployed on GitHub Pages/Netlify.
+            </p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+          </div>
+          <div class="project-actions">
+            <a class="btn small ghost" href="#" aria-disabled="true">Live</a>
+            <a class="btn small ghost" href="#" aria-disabled="true">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section container">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <article class="tl-item">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-content">
+            <h3>Acquisitions & Development Intern — Saul Urban</h3>
+            <p class="meta">May 2024 – Present · Bethesda, MD</p>
+            <ul>
+              <li>Evaluated 1–3+ potential acquisitions weekly; analyzed zoning, financials, and submarkets.</li>
+              <li>Built underwriting tools and automated data collection to speed diligence.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="tl-item">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-content">
+            <h3>Freelance Web Developer</h3>
+            <p class="meta">May 2025 – Present · Hyattsville, MD</p>
+            <ul>
+              <li>Designed and launched full‑stack sites for small businesses; boosted inquiries 15–20% (client feedback).</li>
+              <li>Shipped responsive UX and basic SEO; deployed via GitHub and modern hosts.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section container">
+      <h2>Education</h2>
+      <div class="edu">
+        <h3>University of Notre Dame — B.S. Computer Science (’27)</h3>
+        <ul>
+          <li>Minor: Real Estate · Awards: Hispanic Scholarship Fund, Deloitte Scholarship</li>
+          <li>Relevant coursework: Data Structures, Discrete Math, Computing Systems, Algorithms</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>Want to collaborate or chat? Reach me via email or socials below.</p>
+      <div class="contact-cards">
+        <a class="card contact-card" href="mailto:youremail@example.com">
+          <h3>Email</h3>
+          <p>youremail@example.com</p>
+        </a>
+        <a class="card contact-card" href="https://github.com/your-github" target="_blank" rel="noopener">
+          <h3>GitHub</h3>
+          <p>github.com/your-github</p>
+        </a>
+        <a class="card contact-card" href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">
+          <h3>LinkedIn</h3>
+          <p>linkedin.com/in/your-linkedin</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Giancarlos Reyes. Built with semantic HTML, modern CSS, and a sprinkle of JS.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
